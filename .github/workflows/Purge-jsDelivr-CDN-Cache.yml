@@ -1,9 +1,9 @@
 name: Purge jsDelivr CDN Cache
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    # 使用 cron 表达式定义每5小时运行一次
+    - cron: "0 */5 * * *"
 
 jobs:
   purge-cdn:
